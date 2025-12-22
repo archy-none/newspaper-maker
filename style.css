@@ -1,0 +1,24 @@
+#root div {
+    top: 100px;
+    left: 100px;
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    user-select: none;
+    touch-action: none;
+    cursor: grab;
+    overflow: hidden;
+    &:active {
+        cursor: grabbing;
+    }
+    &.write {
+        border: 10px solid lightcoral;
+    }
+    &:hover {
+        border: 10px solid lightblue;
+    }
+}
+
+#controll {
+    position: absolute;
+}
