@@ -1,6 +1,7 @@
 var activeItem = null;
 
 function isolate() {
+  activeItem = null;
   for (item of root.children) {
     item.className = "";
   }
