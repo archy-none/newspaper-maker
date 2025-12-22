@@ -7,7 +7,13 @@ function isolate() {
   }
 }
 
-function createItem() {
+function remove() {
+  if (window.activeItem !== null) {
+    window.activeItem.remove();
+  }
+}
+
+function create() {
   let el = document.createElement("div");
   let root = document.getElementById("root");
   root.appendChild(el);
@@ -20,7 +26,9 @@ function createItem() {
       read(el);
     }
 
-    isolate();
+    for (item of root.children) {
+      item.className = "";
+    }
     el.classList.toggle("write");
   };
   new DragMoveResize(el);
