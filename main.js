@@ -1,7 +1,7 @@
-var activeItem = null;
+window.activeItem = null;
 
 function isolate() {
-  activeItem = null;
+  window.activeItem = null;
   for (item of root.children) {
     item.className = "";
   }
@@ -13,11 +13,11 @@ function createItem() {
   root.appendChild(el);
 
   el.onclick = () => {
-    activeItem = el;
+    window.activeItem = el;
     if (el.classList.contains("write")) {
-      write(activeItem);
+      write(el);
     } else {
-      read(activeItem);
+      read(el);
     }
 
     isolate();
