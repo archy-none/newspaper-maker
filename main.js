@@ -19,17 +19,15 @@ function create() {
   root.appendChild(el);
 
   el.onclick = () => {
-    window.activeItem = el;
     if (el.classList.contains("write")) {
       write(el);
     } else {
       read(el);
     }
 
-    for (item of root.children) {
-      item.className = "";
-    }
+    isolate();
     el.classList.toggle("write");
+    window.activeItem = el;
   };
   new DragMoveResize(el);
   write(el);
