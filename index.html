@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <title>New Paper Maker</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js"></script>
+        <script src="drug.js"></script>
+    </head>
+
+    <body>
+        <div id="controll">
+            <button onclick="createItem()">New</button>
+            <button onclick="isolate()">Cancel</button>
+            <button onclick="activeItem.remove()">Remove</button>
+            <label>Size: </label>
+            <input id="size" type="number" />
+            <label>Color: </label>
+            <input id="color" type="text" />
+            <label>Background: </label>
+            <input id="back" type="text" />
+            <label>Value: </label>
+            <input id="value" type="text" />
+            <hr />
+        </div>
+
+        <div id="root"></div>
+    </body>
+</html>
