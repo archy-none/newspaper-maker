@@ -26,13 +26,9 @@ function create() {
   root.appendChild(el);
 
   el.onclick = () => {
-    if (el.classList.contains("write")) {
-      write(el);
-    } else {
-      read(el);
-    }
+    (el.classList.contains("write") ? write : read)(el);
 
-    isolate();
+    cancel();
     el.classList.toggle("write");
     window.activeItem = el;
   };
