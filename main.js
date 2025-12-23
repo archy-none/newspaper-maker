@@ -1,12 +1,6 @@
 window.activeItem = null;
 window.zIndex = 0;
 
-function layer() {
-  if (window.activeItem !== null) {
-    window.activeItem.style.zIndex = ++window.zIndex;
-  }
-}
-
 function cancel() {
   window.activeItem = null;
   for (item of root.children) {
@@ -29,6 +23,7 @@ function create() {
     (el.classList.contains("write") ? write : read)(el);
 
     cancel();
+    el.style.zIndex = ++window.zIndex;
     el.classList.toggle("write");
     window.activeItem = el;
   };
