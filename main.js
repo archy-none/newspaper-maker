@@ -1,9 +1,9 @@
 window.activeItem = null;
 window.zIndex = 0;
 
-function layerup() {
+function layer() {
   if (window.activeItem !== null) {
-    window.activeItem.style.zIndex = window.zIndex++;
+    window.activeItem.style.zIndex = ++window.zIndex;
   }
 }
 
