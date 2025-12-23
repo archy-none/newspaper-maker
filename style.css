@@ -8,6 +8,9 @@
     touch-action: none;
     cursor: grab;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:active {
         cursor: grabbing;
     }
