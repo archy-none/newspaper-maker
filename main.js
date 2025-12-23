@@ -1,4 +1,11 @@
 window.activeItem = null;
+window.zIndex = 0;
+
+function layerup() {
+  if (window.activeItem !== null) {
+    window.activeItem.style.zIndex = window.zIndex++;
+  }
+}
 
 function isolate() {
   window.activeItem = null;
