@@ -7,7 +7,7 @@ function layer() {
   }
 }
 
-function isolate() {
+function cancel() {
   window.activeItem = null;
   for (item of root.children) {
     item.className = "";
